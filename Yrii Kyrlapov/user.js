@@ -1,7 +1,7 @@
-db.users.updateMany(
-    { country: { $nin: ["China", "France"] } },
-    { 
-      $inc: { balance: 100 },  
-      $set: { blocked: true } 
-    }
-  )
+db.users.countDocuments( 
+    
+    { country: { $in: ["Germany", "USA"] },
+
+   blocked: false, 
+
+   balance: { $gte: 10, $lte: 1000 } })
